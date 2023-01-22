@@ -2,8 +2,6 @@
 
 This is my portfolio website [Risky Saputra](https://risky-saputra.my.id/).
 
-build using
-
 ## Tech Stack
 
 **Client:** NextJs, TailwindCSS
