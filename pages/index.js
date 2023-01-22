@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,6 +17,13 @@ export default function Home() {
         <div>
           <h1 className="text-3xl">Hi My name is Risky Saputra</h1>
           <h2 className="text-3xl">Welcome to my website !</h2>
+          <Link
+            className="text-[40px] text-blue-400"
+            href={"https://permovie.risky-saputra.my.id/"}
+            target="_blank"
+          >
+            -Permovie-
+          </Link>
         </div>
       </main>
     </>
