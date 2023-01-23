@@ -1,17 +1,14 @@
 pipeline {
-     agent any
-     tools {nodejs "NodeJS"}
-     stages {
-        stage("Build") {
-            steps {
-                sh "npm install"
-                sh "npm run build"
-            }
+    agent {
+        docker {
+            image 'node:lts-bullseye-slim' 
+            args '-p 3000:3000' 
         }
-        stage("Deploy") {
+    }
+    stages {
+        stage('Build') { 
             steps {
-                sh "pm2 start npm --name portfolio-website -- start -- -p 3000"
-                sh 'echo "DONE"'
+                sh 'npm install' 
             }
         }
     }
